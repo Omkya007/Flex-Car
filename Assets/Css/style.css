@@ -1,0 +1,383 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-grey);
+    color:var(--color-dark);
+    font-family: "Asap", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+}
+
+/* header css */
+
+.header{
+    background-color: var(--color-dark);
+    color:var(--color-white);
+    display: flex;
+    height:400px;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+
+}
+.header .site-info{
+    text-transform: uppercase;
+}
+.site-info{
+   
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+.navbar ul{
+    display: flex;
+    flex-direction: column;
+}
+.navbar li a:visited,
+.navbar li a:link
+{
+    text-transform: capitalize;
+    background-color: var(--color-primary);
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color:var(--color-dark)
+  
+}
+
+.navbar li a:hover,
+.navbar li a:focus,
+.navbar li a:active{
+    background-color: var(--color-dark);
+    color:var(--color-primary)
+  
+}
+/* content-area-css */
+.content-area{
+    flex-direction: column;
+}
+main.main-content-area{
+    padding: 10px;
+}
+ 
+/* posts css */
+.posts{
+    display: flex;
+    flex-direction: column;
+}
+.post{
+    background-color: var(--color-white);
+    margin-bottom: 10px;
+}
+.post img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    
+
+}
+.post figure{
+
+    display: flex;
+    flex-direction: column;
+}
+.post figure h2{
+    background-color: var(--color-primary);
+    text-align: center;
+    text-transform: capitalize;
+    padding: 20px;
+    color: var(--color-dark);
+   
+}
+.post p{
+    padding: 25px;
+    color: var(--color-dark);
+    
+
+}
+
+/*Display cars info*/
+
+figure.car-card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    margin-bottom: 15px;
+}
+.car-img img{
+    object-fit: cover;
+    width: 100%;
+    
+    
+}
+.car-content{
+    padding: 20px;
+}
+.car-content h3{
+    text-transform: capitalize;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+/* car-garage*/
+.car-shop{
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    text-align: center;
+    
+}
+.car-image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    
+}
+.car-image{
+    height: 260px;
+}
+.car-founders img{
+    width: 50px;
+    border-radius: 50%;
+}
+.car-infos{
+    background-color: var(--color-white);
+   padding: 10px;
+   
+}
+.car-rating{
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-weight: 700;
+}
+a.car-link{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+/* gallary section */
+.gallary-imgs{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.gallary-img{
+    margin-left: 10px;
+    height: 360px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+.gallary-img a{
+    display: block;
+    height: 100%;
+    
+
+}
+.gallary-img a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+/* sidebar-section css */
+.wedget{
+    padding: 20px;
+
+}
+.wedget-card{
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    padding: 20px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.wedget-card a {
+    color:var(--color-dark) !important; 
+    font-weight:bold;
+}
+.wedget-card h4{
+    margin-bottom: 10px;
+}
+.wedget-card ul{
+    margin-left: 10px;
+}
+
+.footer{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+
+/* for dev width>768 */
+
+@media all and (min-width: 768px){
+   
+    .posts{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .post{
+        width: 49%;
+    }
+    figure.car-card{
+        flex-direction: row;
+    }
+    .car-img{
+        align-self: center;
+        padding-left: 10px;
+        width: 100%;
+        height: 100%;
+
+       
+    }
+    .reverse .car-img{
+        order: 1;
+        padding-right: 10px;
+        
+
+    }
+    figcaption.car-content {
+        align-self: center;
+        padding: 10px;
+    }
+    
+    .car-shop{
+        flex-direction: row;
+    }
+    .car-infos{
+        flex-grow: 1;
+        width: 200px;
+
+    }
+    .car-rating ,.car-link{
+        flex: 0 0 160px;
+    }
+    .gallary-img{
+        margin-left: 10px;
+        flex-basis: 48%;
+        flex-grow: 0;
+    }
+    .gallary-imgs{
+        margin-left: -10px;
+        justify-content:space-between;
+    }
+
+    
+
+}
+/* 
+for dev width >1180 */
+
+@media all and (min-width:1180px) {
+    .navbar ul{
+      flex-direction: row;
+    }
+  .navbar ul  li{
+        flex-grow: 1;
+    }
+    .content-area{
+        flex-direction: row;
+    }
+    .main-content-area{
+        flex-grow: 1;
+        padding: 20px;
+    }
+    .sidebar-section{
+        flex:0 0 400px;
+        
+    }
+    .post{
+        width: 100%;
+    }
+    .one-half{
+        width: 49%;
+        
+    }
+    .one-third{
+        width: 32%;
+    }
+  
+    .posts{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    /*
+    the order in which img are to be displayed
+    (4*0+1)=1
+    (4*1+1)=5
+    (4*2+1)=9
+
+    (4*0+2)=2
+    (4*1+2)=6
+    (4*2+2)=10
+
+    (4*0+3)=3
+    (4*1+3)=7
+    (4*2+3)=11
+
+    (4*0+4)=4
+    (4*1+4)=8
+    
+
+    
+    
+    
+    
+    
+    
+    */
+    .gallary-img:nth-child(4n+1){
+        flex-basis: 260px;
+    }
+    .gallary-img:nth-child(4n+2){
+        flex-basis: 340px;
+    }
+    .gallary-img:nth-child(4n+3){
+        flex-basis: 300px;
+    }
+    .gallary-img:nth-child(4n+4){
+        flex-basis: 420px;
+    }
+    .gallary-img{
+        flex-grow: 1;
+    }
+    .lambo{
+        height: 400px;
+        width: auto;
+        
+       
+    }
+    
+  }
+
